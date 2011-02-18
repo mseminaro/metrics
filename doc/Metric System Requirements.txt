@@ -1,0 +1,38 @@
+Engineering Metrics System
+
+The system provides a way to identify key business and engineering metrics that are needed to manage my organization. 
+
+A metric has the following attributes:
+  Name
+  Description
+  Collection Frequency (daily, weekly, monthly)
+  Frequency Type (point in time vs. duration, e.g. January 15th vs January 1st - 30th)
+  Target Level (e.g. < 10)
+  Collected by (name of the person who will manage the data)
+
+Calculated metrics: These are a formula that includes one ore more metric values. The formula supports the typical arithmetic (add, subtract, multiple, divide) and functions (e.g. total, average, max, min, etc).
+
+Metrics can be broken down into other sub-metrics. This implies that the parent metric is actually a calculated value equal to the sum of all the child metrics. Modeling metrics in this way will implicitly enable a drill down in the UI and will always group those metrics for input. An example of this would be an incident tickets metrics that was broken down by severity.
+
+Metrics can be grouped for pre-canned reporting which will work on metric groups.
+
+There are 3 main parts of the UI:
+  1) Metric administration: Let's you setup metrics, metric groups, etc
+  2) Data Entry: Allows a user to input the metrics as they are collected over time.
+  3) Reports: Allows the user to view reports on the metric data. New reports can be created and scheduled here as well.
+  
+Reports can contain charts and tables of metric data.
+Reports can be setup to run automatically and email the output to a list of email addresses.
+  
+Example metrics the system should support:
+  Incident tickets opened (broken down by sev), per month
+  Employees in team (broken down by function), per month
+  Attrition, per month
+  Callouts/month
+  Open defects (by priority and age)
+  New defects
+  Closed defects
+  Unit test coverage
+  Application availability
+  
+  
